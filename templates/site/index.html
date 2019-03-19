@@ -5,6 +5,14 @@
 	<title>Document</title>
 </head>
 <body>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, explicabo esse! Culpa nostrum reiciendis nulla a incidunt, commodi doloremque ut repellat numquam at hic vitae, consectetur repudiandae tenetur neque fugiat.</p>
+	<div>
+		{% for post in posts %}
+    <div>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaksbr }}</p>
+        <p>published: {{ post.published_date }}</p>
+    </div>
+{% endfor %}
+	</div>
 </body>
 </html>
